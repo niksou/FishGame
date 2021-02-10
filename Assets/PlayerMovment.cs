@@ -21,6 +21,7 @@ public class PlayerMovment : MonoBehaviour
     {
         //physics calculation
         Move();
+        
 
     }
 
