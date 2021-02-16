@@ -8,7 +8,7 @@ public class PlayerMovment : MonoBehaviour
 
 {
 
-    public string levelToLoad;
+    //public string levelToLoad;
 
 
 
