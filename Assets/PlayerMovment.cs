@@ -2,40 +2,54 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class PlayerMovment : MonoBehaviour
 {
-    public float moveSpeed;
+    [SerializeField] private float speed = 950.0f;
 
-    public Rigidbody2D rb;
+    private Rigidbody2D rigidBody;
+    static int counter = 0;
+    GameObject babystar;
 
-    private Vector2 moveDirection;
+    private void Start()
+    {
+        rigidBody = GetComponent<Rigidbody2D>();
+        babystar = GameObject.Find("Starfishbaby");
+        babystar.SetActive(false);
 
-    // Update is called once per frame
+    }
+
+
     void Update()
     {
-        ProcessInputs();
+        float deltaX = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        float deltaY = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+        Vector2 movement = new Vector2(deltaX, deltaY);
+        rigidBody.velocity = movement;
+
+        if (!Mathf.Approximately(deltaX, 0.0f))
+        {
+            // Scale x to either positive or negative 1 to 'turn' the character
+            transform.localScale = new Vector3(Mathf.Sign(deltaX), 1.0f, 1.0f);
+        }
+     
+
     }
 
-
-    void FixedUpdate()
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        //physics calculation
-        Move();
-        
+        if (col.gameObject.tag == "bubble")
+        {
+            Destroy(col.gameObject);
+            counter++;
+        }
+        if (counter == 4)
+        {
+            babystar.SetActive(true);
+        }
 
     }
 
-    void ProcessInputs()
-    {
-        float moveX = Input.GetAxisRaw("Horizontal");//input 1 OR 0
-        float moveY = Input.GetAxisRaw("Vertical");
-
-        moveDirection = new Vector2(moveX, moveY);
-    }
-
-    void Move()
-    {
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
-    }
 
 }

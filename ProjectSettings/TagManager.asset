@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - TriDestenation
+  - starfish
+  - bubble
   layers:
   - Default
   - TransparentFX
@@ -41,4 +43,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 357597301
+    locked: 0
+  - name: foreground
+    uniqueID: 441264633
+    locked: 0
+  - name: Objects
+    uniqueID: 2785150209
+    locked: 0
+  - name: player
+    uniqueID: 4186107071
     locked: 0
