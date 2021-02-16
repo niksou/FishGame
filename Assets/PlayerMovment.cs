@@ -5,18 +5,29 @@ using UnityEngine;
 
 
 public class PlayerMovment : MonoBehaviour
+
 {
+
+    public string levelToLoad;
+
+
+
     [SerializeField] private float speed = 950.0f;
 
     private Rigidbody2D rigidBody;
     static int counter = 0;
     GameObject babystar;
+    GameObject winLevel1;
+    GameObject star1;
+
 
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+
         babystar = GameObject.Find("Starfishbaby");
         babystar.SetActive(false);
+
 
     }
 
@@ -48,6 +59,7 @@ public class PlayerMovment : MonoBehaviour
         {
             babystar.SetActive(true);
         }
+       
 
     }
 
