@@ -70,8 +70,25 @@ public class PlayerMovment1 : MonoBehaviour
             transform.localScale = new Vector3(Mathf.Sign(deltaX), 1.0f, 1.0f);
         }
 
+        if (yCount == 5)
+        {
+            yStar.SetActive(false);
+        }
+
+        if (rCount == 3)
+        {
+            rStar.SetActive(false);
+        }
+
+        if (gCount == 1)
+        {
+            gStar.SetActive(false);
+        }
+
+
         if (yCount == 5 && rCount == 3 && gCount == 1)
         {
+
             key.SetActive(true);
         }
      

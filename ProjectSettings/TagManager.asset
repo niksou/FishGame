@@ -10,6 +10,9 @@ TagManager:
   - levelEnd
   - babystar
   - code
+  - pearl1
+  - shell
+  - key
   layers:
   - Default
   - TransparentFX
