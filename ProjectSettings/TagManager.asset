@@ -13,6 +13,9 @@ TagManager:
   - pearl1
   - shell
   - key
+  - floor
+  - roof
+  - coral1
   layers:
   - Default
   - TransparentFX
