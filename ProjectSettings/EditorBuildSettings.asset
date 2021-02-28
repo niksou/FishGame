@@ -9,15 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 1870fdf28dc13ef4fb55c97cbdc21b07
   - enabled: 1
-    path: Assets/UnderwaterFantasy/Level1.unity
+    path: Assets/Scenes/Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/UnderwaterFantasy/Level2.unity
+    path: Assets/Scenes/Level2.unity
     guid: a6244a7d55a99d44a95c1b10606b8d0c
   - enabled: 1
-    path: Assets/UnderwaterFantasy/Level3.unity
+    path: Assets/Scenes/Level3.unity
     guid: 6dc78d7e130af0a4da0819d1acf81316
   - enabled: 1
-    path: Assets/UnderwaterFantasy/win.unity
+    path: Assets/Scenes/win.unity
     guid: 61d486492b1d5844ea0d5308f6e368d8
   m_configObjects: {}
